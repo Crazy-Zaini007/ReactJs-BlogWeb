@@ -1,0 +1,11 @@
+{
+  "blogs": [
+    {
+      "title": "Web Development",
+      "author": "Dany",
+      "image": "http://localhost:3000/static/media/blog-writing.9b63cfb62c41b21a6e6f.png",
+      "body": " sdffefsd",
+      "id": 1
+    }
+  ]
+}

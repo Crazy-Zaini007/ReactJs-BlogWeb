@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Carousel from './components/Carousel';
+import Create from './components/Create';
+import NotFound404 from './components/NotFound404';
+import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
+import Footer from './components/Footer';
+import BlogDetails from './components/BlogDetails';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<>
+<Router>
+<Navbar/>
+
+
+    <Routes>
+    <Route exact path='/' element={<><Carousel /><Home /></>}>
+      </Route> 
+      <Route exact path='/create' element={<Create />}>
+      </Route>
+      <Route exact path='/blogs/:id' element={<BlogDetails />}>
+        
+      </Route>
+
+      <Route path='*' element={<NotFound404/>}></Route>
+    </Routes>
+    <Footer />
+</Router>
+    
+
+  
+    
+    </>
   );
 }
 
