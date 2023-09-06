@@ -7,11 +7,11 @@ import "../App.css"
 // import BlogList from './BlogList.js'
 export default function BlogDetails() {
     const { id }=useParams()
-    const {mydata:myblogs, isPending, error}=useFetch('http://localhost:8000/blogs/'+id)
+    const {mydata:myblogs, isPending, error}=useFetch('https://reactjs-blogweb-production.up.railway.app/blogs/'+id)
 
     const navigate=useNavigate()
     const deleteBlog=()=>{
-      fetch('http://localhost:8000/blogs/' + myblogs.id, {
+      fetch('https://reactjs-blogweb-production.up.railway.app/blogs/' + myblogs.id, {
         method:'DELETE'
       })
       .then(()=>{
