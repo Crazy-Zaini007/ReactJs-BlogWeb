@@ -14,7 +14,7 @@ export default function Create() {
     e.preventDefault();
     const blog= {title, author, image, body}
     
-    fetch('http://localhost:8000/blogs', {
+    fetch('https://reactjs-blogweb-production.up.railway.app/blogs', {
       method: 'POST',
       headers: {"Content-Type":"application/json"},  // to tell the server the type of content we are sending
       body: JSON.stringify(blog)  // to convert the givern data into json
